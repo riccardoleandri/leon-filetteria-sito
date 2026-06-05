@@ -1,0 +1,261 @@
+/* ============================================
+   LEON — Pagina Carni
+   ============================================ */
+
+/* --- Hero carni --- */
+.carni-hero {
+  padding-top: calc(var(--nav-height) + 60px);
+  padding-bottom: 40px;
+  text-align: center;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.carni-hero h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.carni-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Categoria carni --- */
+.carni-category {
+  margin-bottom: 60px;
+}
+
+.carni-category-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.carni-category-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.carni-category-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+/* --- Grid carni --- */
+.carni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* --- Card carne con flip --- */
+.carne-card {
+  height: 360px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.carne-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.carne-card.flipped .carne-card-inner {
+  transform: rotateY(180deg);
+}
+
+.carne-card-front,
+.carne-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.carne-card:hover .carne-card-front {
+  border-color: var(--gold);
+}
+
+.carne-card-back {
+  transform: rotateY(180deg);
+  background: var(--bg-warm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  border-color: var(--gold);
+}
+
+/* Fronte — immagine e info base */
+.carne-card-image {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+/* Gradient placeholder diversi per tipo */
+.carne-card[data-origin="Africa"] .carne-card-image {
+  background: linear-gradient(135deg, #3d2200, #8b5a00, #4a2800);
+}
+.carne-card[data-origin="Australia"] .carne-card-image {
+  background: linear-gradient(135deg, #2d1b11, #6b3020, #3d1a00);
+}
+.carne-card[data-origin="Scandinavia"] .carne-card-image {
+  background: linear-gradient(135deg, #1a2030, #3a4a6a, #0d1520);
+}
+.carne-card[data-origin="Europa"] .carne-card-image {
+  background: linear-gradient(135deg, #1a1508, #3d3010, #2a1f0a);
+}
+.carne-card[data-origin="Italia"] .carne-card-image {
+  background: linear-gradient(135deg, #2a1f0a, #6b4f1d, #1a1508);
+}
+.carne-card[data-origin="Giappone"] .carne-card-image {
+  background: linear-gradient(135deg, #1a0000, #4a1a2a, #0a0a0a);
+}
+.carne-card[data-origin="Danimarca"] .carne-card-image {
+  background: linear-gradient(135deg, #1a1508, #4a3a10, #2a1f0a);
+}
+.carne-card[data-origin="Irlanda"] .carne-card-image {
+  background: linear-gradient(135deg, #0a1a0a, #1a3a1a, #0a100a);
+}
+.carne-card[data-origin="Spagna"] .carne-card-image {
+  background: linear-gradient(135deg, #3d1a00, #8b3a00, #2a1000);
+}
+
+.carne-card-image .badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.carne-card-flag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+.carne-card-info {
+  padding: 20px;
+  background: var(--bg-warm);
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carne-card-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.carne-card-info p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Retro — perché la scegliamo */
+.carne-card-back h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.carne-card-back p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.carne-card-back .flip-hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Hint al fronte per indicare l'interattività */
+.carne-card-front::after {
+  content: 'Clicca per scoprire di più';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(to top, rgba(10,10,10,0.8), transparent);
+}
+
+.carne-card:hover .carne-card-front::after {
+  opacity: 1;
+}
+
+/* --- Sezione tagli --- */
+.tagli-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.taglio-card {
+  background: var(--bg-warm);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.taglio-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.taglio-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.taglio-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .carni-grid {
+    grid-template-columns: 1fr;
+  }
+  .carne-card {
+    height: 340px;
+  }
+}

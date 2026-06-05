@@ -1,0 +1,450 @@
+/* ============================================
+   LEON — Pagina Menu Completo
+   ============================================ */
+
+/* --- Hero menu --- */
+.menu-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: clamp(40px, 6vh, 80px);
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.menu-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.menu-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.5) 50%, rgba(10, 10, 10, 0.3) 100%),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.6) 0%, transparent 40%);
+}
+
+.menu-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.menu-hero h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 12px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.menu-hero .subtitle-elegant {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .menu-hero {
+    min-height: 40vh;
+  }
+}
+
+/* --- Layout con sidebar --- */
+.menu-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px clamp(20px, 4vw, 40px) var(--section-padding);
+}
+
+/* Sidebar navigazione sticky */
+.menu-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+  align-self: start;
+  max-height: calc(100vh - var(--nav-height) - 40px);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.menu-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.menu-sidebar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-sidebar-nav a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  border-left: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.menu-sidebar-nav a:hover,
+.menu-sidebar-nav a.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+/* --- Contenuto menu --- */
+.menu-content {
+  min-width: 0;
+}
+
+.menu-section {
+  margin-bottom: 60px;
+  scroll-margin-top: calc(var(--nav-height) + 20px);
+}
+
+.menu-section:first-child {
+  margin-top: 0;
+}
+
+.menu-section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.menu-section-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.menu-section-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+}
+
+.menu-section-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  flex-grow: 1;
+}
+
+.menu-section-count {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* --- Voce singola del menu --- */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+  gap: 16px;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-info {
+  flex: 1;
+}
+
+.menu-item-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu-item-desc {
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.menu-item-price {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Prezzi al kg con pill */
+.price-kg {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* Badge esotico inline */
+.menu-item-exotic {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: help;
+}
+
+.menu-item-exotic svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--gold);
+}
+
+/* --- Sezione filetti (highlight) --- */
+.menu-section.highlight .menu-item {
+  padding: 18px 20px;
+  background: rgba(26, 21, 8, 0.5);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.menu-section.highlight .menu-item:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Sezione vini --- */
+.wine-region {
+  margin-bottom: 24px;
+}
+
+.wine-region-name {
+  font-family: var(--font-sub);
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 12px;
+  padding-left: 8px;
+  border-left: 2px solid var(--gold);
+}
+
+/* --- Filtro menu (top nav mobile) --- */
+.menu-filter-mobile {
+  display: none;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.menu-filter-mobile::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-filter-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background: rgba(201, 168, 76, 0.05);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+  font-family: var(--font-body);
+}
+
+.menu-filter-btn.active,
+.menu-filter-btn:hover {
+  background: var(--gold);
+  color: var(--bg-primary);
+  border-color: var(--gold);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu-hero {
+    min-height: 35vh;
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 20px 16px var(--section-padding);
+  }
+
+  .menu-sidebar {
+    display: none;
+  }
+
+  .menu-filter-mobile {
+    display: flex;
+    gap: 8px;
+    padding: 16px 16px;
+    margin-bottom: 8px;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .menu-filter-btn {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    font-size: 0.7rem;
+    margin-right: 0;
+  }
+
+  .menu-section {
+    margin-bottom: 40px;
+    scroll-margin-top: 140px;
+  }
+
+  .menu-section-header {
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .menu-section-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .menu-section-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .menu-section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .menu-section-count {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .menu-item {
+    padding: 12px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .menu-item-name {
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+
+  .menu-item-desc {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .menu-item-price {
+    font-size: 1rem;
+  }
+
+  .price-kg {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+  }
+
+  .menu-section.highlight .menu-item {
+    padding: 14px 14px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+
+  .wine-region {
+    margin-bottom: 16px;
+  }
+
+  .wine-region-name {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* Piccoli schermi extra (iPhone SE, ecc.) */
+@media (max-width: 380px) {
+  .menu-hero {
+    min-height: 30vh;
+  }
+
+  .menu-layout {
+    padding: 16px 12px var(--section-padding);
+  }
+
+  .menu-filter-btn {
+    padding: 8px 12px;
+    font-size: 0.65rem;
+  }
+
+  .menu-section-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-item-name {
+    font-size: 0.88rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.92rem;
+  }
+}

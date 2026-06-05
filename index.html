@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEON — Filetteria Bisteccheria | Roma</title>
+  <meta name="description" content="LEON Filetteria Bisteccheria a Roma. Carni pregiate, esotiche e selezionate da tutto il mondo. Wagyu, Kobe, Zebra, Renna. Un'esperienza gastronomica di lusso.">
+
+  <meta property="og:title" content="LEON — Filetteria Bisteccheria | Roma">
+  <meta property="og:description" content="Carni pregiate, esotiche e selezionate da tutto il mondo. Un'esperienza gastronomica di lusso a Roma.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="it_IT">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "LEON Filetteria Bisteccheria",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Nocera Umbra 18/20/22",
+      "addressLocality": "Roma",
+      "postalCode": "00181",
+      "addressCountry": "IT"
+    },
+    "telephone": "+390691939630",
+    "email": "leonfiletteria@gmail.com",
+    "servesCuisine": ["Italiana", "Steakhouse", "Grill"],
+    "priceRange": "€€€"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" aria-hidden="true">
+    <img class="loader-logo" src="assets/logo.png" alt="LEON" width="120" height="120">
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="LEON - Torna alla home">
+        <img src="assets/logo.png" alt="LEON Filetteria Bisteccheria">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="carni.html">Le Carni</a></li>
+        <li><a href="#prenota">Prenota</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="carni.html">Le Carni</a>
+    <a href="#prenota">Prenota</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+
+  <!-- ========================================
+       HERO — Video immersivo, layout asimmetrico
+       ======================================== -->
+  <section class="hero">
+    <!-- Video di sfondo -->
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline poster="">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <!-- Braci -->
+    <div class="embers-container" aria-hidden="true"></div>
+
+    <!-- Brand mark in alto a sinistra -->
+    <div class="hero-brand">
+      <img src="assets/logo.png" alt="LEON">
+      <div class="hero-brand-text">
+        <span class="brand-name">LEON</span>
+        <span class="brand-sub">Filetteria &middot; Bisteccheria</span>
+      </div>
+    </div>
+
+    <!-- Contenuto principale — allineato in basso a sinistra -->
+    <div class="hero-content">
+      <div class="hero-headline" data-aos="fade-up" data-aos-duration="1200">
+        <h1>L'arte della<br><strong>carne perfetta.</strong></h1>
+      </div>
+
+      <div class="hero-details" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <span class="hero-detail-line"></span>
+        <span class="hero-detail-text">Carni rare e pregiate da tutto il mondo</span>
+        <span class="hero-detail-tag">Roma &middot; dal 2018</span>
+      </div>
+
+      <div class="hero-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+        <a href="menu.html" class="btn btn-primary btn-fill-hover">Scopri il Menu</a>
+        <a href="#prenota" class="btn btn-secondary link-underline">Prenota un Tavolo</a>
+      </div>
+    </div>
+
+    <!-- Scroll cue verticale a destra -->
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-text">Scroll</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       MANIFESTO — Chi siamo, layout editoriale
+       ======================================== -->
+  <section id="about" class="manifesto">
+    <div class="manifesto-layout">
+      <div class="manifesto-visual" data-aos="fade-right" data-aos-duration="1000" role="img" aria-label="Interno del ristorante LEON">
+        <img src="assets/tbone-taglio.jpg" alt="T-Bone tagliata al coltello da LEON" loading="lazy">
+      </div>
+
+      <div class="manifesto-text" data-aos="fade-left" data-aos-duration="1000">
+        <div class="manifesto-eyebrow">Il nostro manifesto</div>
+
+        <h2>Dove la passione<br>incontra il <strong>fuoco</strong></h2>
+
+        <p class="manifesto-body">
+          Ogni taglio racconta una storia. Selezioniamo carni da ogni angolo
+          del mondo — dal Wagyu di Kobe al Filetto di Zebra africana — per
+          portare sul vostro piatto un'esperienza che va oltre il pasto.
+          Non e un ristorante. E un rituale.
+        </p>
+
+        <div class="manifesto-badge">
+          <div class="manifesto-badge-dot"></div>
+          <span>Dal 2018 &middot; Roma &middot; Via Nocera Umbra</span>
+        </div>
+
+        <div class="manifesto-tags">
+          <div class="manifesto-tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2C12 2 8 6 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 6 12 2 12 2Z"/><path d="M12 14V22"/><path d="M8 18H16"/></svg>
+            Cottura magistrale
+          </div>
+          <div class="manifesto-tag">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12H22"/><path d="M12 2C14.5 4.7 16 8.2 16 12C16 15.8 14.5 19.3 12 22C9.5 19.3 8 15.8 8 12C8 8.2 9.5 4.7 12 2Z"/></svg>
+            Carni internazionali
+          </div>
+          <div class="manifesto-tag">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Selezione premium
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       TAGLI — Horizontal scroll showcase
+       ======================================== -->
+  <section class="tagli-showcase">
+    <div class="tagli-header">
+      <div class="tagli-header-left">
+        <h2 data-aos="fade-up">I nostri tagli<br><strong>d'eccellenza</strong></h2>
+        <p data-aos="fade-up" data-aos-delay="100">Selezionati per voi da ogni angolo del mondo.</p>
+      </div>
+      <div class="tagli-header-right" data-aos="fade-left">
+        <button class="tagli-arrow" aria-label="Scorri a sinistra" data-dir="-1">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="tagli-arrow" aria-label="Scorri a destra" data-dir="1">
+          <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="tagli-track">
+      <!-- 01 — Wagyu Kobe -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="0">
+        <div class="taglio-slide-image">
+          <img src="assets/carne-rosa-sale.jpg" alt="Wagyu Giappone Kobe" loading="lazy">
+          <span class="taglio-slide-number">01</span>
+          <span class="badge badge-raro">Raro</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Giappone &middot; Kobe +10</p>
+          <h3>Wagyu Giappone</h3>
+          <div class="price">&euro;46<small>/etto</small></div>
+        </div>
+      </div>
+
+      <!-- 02 — Filetto di Zebra -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="80">
+        <div class="taglio-slide-image">
+          <img src="assets/filetto-timo.jpg" alt="Filetto di Zebra" loading="lazy">
+          <span class="taglio-slide-number">02</span>
+          <span class="badge badge-esotico">Esotico</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Africa &middot; 200gr</p>
+          <h3>Filetto di Zebra</h3>
+          <div class="price">&euro;39</div>
+        </div>
+      </div>
+
+      <!-- 03 — Filetto di Struzzo -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="160">
+        <div class="taglio-slide-image">
+          <img src="assets/bistecche-sale.jpg" alt="Filetto di Struzzo" loading="lazy">
+          <span class="taglio-slide-number">03</span>
+          <span class="badge badge-esotico">Esotico</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Africa &middot; 200gr</p>
+          <h3>Filetto di Struzzo</h3>
+          <div class="price">&euro;39</div>
+        </div>
+      </div>
+
+      <!-- 04 — Tomahawk -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="240">
+        <div class="taglio-slide-image">
+          <img src="assets/brace-pinze.jpg" alt="Tomahawk alla brace" loading="lazy">
+          <span class="taglio-slide-number">04</span>
+          <span class="badge badge-spettacolare">Spettacolare</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Manzo &middot; ~1kg</p>
+          <h3>Tomahawk</h3>
+          <div class="price">&euro;8<small>/etto</small></div>
+        </div>
+      </div>
+
+      <!-- 05 — Picanha -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="320">
+        <div class="taglio-slide-image">
+          <img src="assets/tagliata-tagliere.jpg" alt="Picanha di Manzo" loading="lazy">
+          <span class="taglio-slide-number">05</span>
+          <span class="badge badge-classico">Classico</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Manzo &middot; 300gr</p>
+          <h3>Picanha</h3>
+          <div class="price">&euro;29</div>
+        </div>
+      </div>
+
+      <!-- 06 — Secreto Iberico -->
+      <div class="taglio-slide" data-aos="fade-up" data-aos-delay="400">
+        <div class="taglio-slide-image">
+          <img src="assets/griglia-fuoco.jpg" alt="Secreto Iberico alla brace" loading="lazy">
+          <span class="taglio-slide-number">06</span>
+          <span class="badge badge-iberico">Iberico</span>
+        </div>
+        <div class="taglio-slide-body">
+          <p class="taglio-slide-origin">Spagna &middot; 200gr</p>
+          <h3>Secreto Iberico</h3>
+          <div class="price">&euro;20</div>
+        </div>
+      </div>
+
+      <!-- CTA slide finale -->
+      <div class="taglio-slide taglio-slide-cta" data-aos="fade-up" data-aos-delay="480">
+        <a href="menu.html" class="taglio-cta-inner">
+          <span class="taglio-cta-label">Scopri tutti i tagli</span>
+          <span class="taglio-cta-title">Menu<br>Completo</span>
+          <span class="taglio-cta-arrow">
+            <svg viewBox="0 0 24 24" width="28" height="28"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/><polyline points="12 5 19 12 12 19" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       MENU FISSI — Grid editoriale
+       ======================================== -->
+  <section class="menu-section-home">
+    <div class="menu-home-header">
+      <h2 data-aos="fade-up">I nostri <strong>menu</strong></h2>
+      <a href="menu.html" class="btn btn-primary btn-fill-hover" data-aos="fade-left">Menu completo</a>
+    </div>
+
+    <div class="menu-home-grid">
+      <div class="menu-home-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="menu-home-card-visual">
+          <img src="assets/fiorentina-piatto.jpg" alt="Menu Churrasco" loading="lazy">
+          <div class="menu-home-card-price"><span>&euro;29,00</span></div>
+        </div>
+        <div class="menu-home-card-body">
+          <h3>Menu Churrasco</h3>
+          <ul class="menu-home-card-list">
+            <li>Antipasto misto della casa</li>
+            <li>Selezione carni alla brace</li>
+            <li>Contorni a scelta</li>
+            <li>Dolce della casa</li>
+          </ul>
+          <a href="menu.html" class="menu-card-link">Vedi il menu &rarr;</a>
+        </div>
+      </div>
+
+      <div class="menu-home-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="menu-home-card-visual">
+          <img src="assets/brace-pinze.jpg" alt="Menu Completo" loading="lazy">
+          <div class="menu-home-card-price"><span>&euro;26,90</span></div>
+        </div>
+        <div class="menu-home-card-body">
+          <h3>Menu Completo</h3>
+          <ul class="menu-home-card-list">
+            <li>Antipasto</li>
+            <li>Primo piatto</li>
+            <li>Secondo con contorno</li>
+            <li>Dolce o caffe</li>
+          </ul>
+          <a href="menu.html" class="menu-card-link">Vedi il menu &rarr;</a>
+        </div>
+      </div>
+
+      <div class="menu-home-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="menu-home-card-visual">
+          <img src="assets/griglia-fuoco.jpg" alt="Menu Vaki" loading="lazy">
+          <div class="menu-home-card-price"><span>&euro;22,90</span></div>
+        </div>
+        <div class="menu-home-card-body">
+          <h3>Menu Vaki</h3>
+          <ul class="menu-home-card-list">
+            <li>Bruschetta di benvenuto</li>
+            <li>Primo o secondo a scelta</li>
+            <li>Contorno</li>
+            <li>Bevanda inclusa</li>
+          </ul>
+          <a href="menu.html" class="menu-card-link">Vedi il menu &rarr;</a>
+        </div>
+      </div>
+
+      <div class="menu-home-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="menu-home-card-visual">
+          <img src="assets/tbone-taglio.jpg" alt="Menu Pranzo" loading="lazy">
+          <div class="menu-home-card-price"><span>Su richiesta</span></div>
+        </div>
+        <div class="menu-home-card-body">
+          <h3>Menu Pranzo</h3>
+          <ul class="menu-home-card-list">
+            <li>Proposta del giorno</li>
+            <li>Primo e secondo</li>
+            <li>Acqua e caffe inclusi</li>
+            <li>Veloce e gustoso</li>
+          </ul>
+          <a href="menu.html" class="menu-card-link">Vedi il menu &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       STATEMENT — Citazione + numeri
+       ======================================== -->
+  <section class="statement">
+    <div class="separator"></div>
+    <div class="statement-inner">
+      <div class="statement-quote" data-aos="fade-up" data-aos-duration="1200">
+        Non serviamo semplicemente carne.<br>
+        Offriamo <em>l'eccellenza</em> in ogni morso.
+      </div>
+
+      <div class="statement-stats" data-aos="fade-up" data-aos-delay="300">
+        <div class="statement-stat">
+          <div class="statement-stat-number" data-count="50" data-suffix="+">0</div>
+          <div class="statement-stat-label">Varieta di carne</div>
+        </div>
+        <div class="statement-stat">
+          <div class="statement-stat-number" data-count="200" data-suffix="+">0</div>
+          <div class="statement-stat-label">Etichette vino</div>
+        </div>
+        <div class="statement-stat">
+          <div class="statement-stat-number" data-count="6" data-suffix="">0</div>
+          <div class="statement-stat-label">Anni di passione</div>
+        </div>
+      </div>
+
+      <div class="statement-cta" data-aos="fade-up" data-aos-delay="500">
+        <a href="menu.html" class="btn btn-primary btn-fill-hover">Esplora il Menu Completo</a>
+        <a href="carni.html" class="btn btn-secondary link-underline">Scopri le Carni</a>
+      </div>
+    </div>
+    <div class="separator" style="margin-top: clamp(60px, 8vh, 100px);"></div>
+  </section>
+
+  <!-- ========================================
+       PRENOTA — Layout cinematografico
+       ======================================== -->
+  <section id="prenota" class="prenota-section">
+    <div class="prenota-grid">
+      <div class="prenota-left" data-aos="fade-right">
+        <h2>Prenota la tua<br><strong>esperienza</strong></h2>
+        <p>Ogni tavolo e un invito. Ogni sera e diversa.</p>
+
+        <div id="contatti" class="prenota-contacts">
+          <div class="prenota-contact">
+            <div class="prenota-contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.97C20.74 20.99 20.48 21 20.22 21C10.96 21 3.48 13.52 3.03 4.26C3.01 3.7 3.46 3.22 4.02 3.22H7.02C7.54 3.22 7.98 3.6 8.05 4.12C8.11 4.58 8.22 5.03 8.38 5.45L6.85 6.98C8.26 9.58 10.42 11.74 13.02 13.15L14.55 11.62C14.97 11.78 15.42 11.89 15.88 11.95C16.4 12.02 16.78 12.46 16.78 12.98V16.92C16.78 17.44 17.16 17.88 17.68 17.95C18.14 18.01 18.59 18.12 19.01 18.28L20.54 16.75C20.96 16.91 21.41 17.02 21.87 17.08C22.39 17.15 22.77 17.59 22.77 18.11"/></svg>
+            </div>
+            <div class="prenota-contact-text">
+              <strong>Telefono</strong><br>
+              <a href="tel:+390691939630">06.91.93.96.30</a>
+            </div>
+          </div>
+
+          <div class="prenota-contact">
+            <div class="prenota-contact-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+            </div>
+            <div class="prenota-contact-text">
+              <strong>Email</strong><br>
+              <a href="mailto:leonfiletteria@gmail.com">leonfiletteria@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="prenota-contact">
+            <div class="prenota-contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.03 7.03 1 12 1C16.97 1 21 5.03 21 10Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="prenota-contact-text">
+              <strong>Indirizzo</strong><br>
+              Via Nocera Umbra 18/20/22, Roma 00181
+            </div>
+          </div>
+        </div>
+
+        <div class="mappa-placeholder">
+          <div class="mappa-text">
+            <svg viewBox="0 0 24 24"><path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.03 7.03 1 12 1C16.97 1 21 5.03 21 10Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p><strong>Via Nocera Umbra 18/20/22</strong><br>Roma 00181 &middot; Zona Appia</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prenota-form" data-aos="fade-left">
+        <form novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" class="form-control" placeholder="Il tuo nome" required>
+            <span class="form-error">Inserisci il tuo nome</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono">Telefono</label>
+              <input type="tel" id="telefono" class="form-control" placeholder="+39 ..." required>
+              <span class="form-error">Inserisci un numero valido</span>
+            </div>
+            <div class="form-group">
+              <label for="ospiti">Ospiti</label>
+              <input type="number" id="ospiti" class="form-control" placeholder="2" min="1" max="30" required>
+              <span class="form-error">Numero ospiti richiesto</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" class="form-control" required>
+              <span class="form-error">Seleziona una data</span>
+            </div>
+            <div class="form-group">
+              <label for="ora">Ora</label>
+              <input type="time" id="ora" class="form-control" required>
+              <span class="form-error">Seleziona un orario</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="note">Note</label>
+            <textarea id="note" class="form-control" placeholder="Allergie, preferenze, occasioni speciali..." rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%;">Conferma Prenotazione</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="tricolore-line"></div>
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo" aria-label="LEON - Home">
+          <img src="assets/logo.png" alt="LEON Filetteria Bisteccheria">
+        </a>
+
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="carni.html">Le Carni</a></li>
+          <li><a href="#prenota">Prenota</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2H15C13.35 2 12 3.35 12 5V8H9V12H12V22H16V12H19L20 8H16V5.5C16 5.22 16.22 5 16.5 5H18V2Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+
+        <p class="footer-copy">&copy; 2025 LEON Filetteria Bisteccheria &middot; P.IVA 14286191003 &middot; Roma</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 60,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+  <!-- Scroll orizzontale tagli con frecce -->
+  <script>
+    document.querySelectorAll('.tagli-arrow').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const track = document.querySelector('.tagli-track');
+        const dir = parseInt(btn.dataset.dir);
+        track.scrollBy({ left: dir * 340, behavior: 'smooth' });
+      });
+    });
+
+    /* Drag scroll sulla track */
+    const track = document.querySelector('.tagli-track');
+    if (track) {
+      let isDown = false, startX, scrollLeft;
+      track.addEventListener('mousedown', e => {
+        isDown = true;
+        startX = e.pageX - track.offsetLeft;
+        scrollLeft = track.scrollLeft;
+      });
+      track.addEventListener('mouseleave', () => { isDown = false; });
+      track.addEventListener('mouseup', () => { isDown = false; });
+      track.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - track.offsetLeft;
+        track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+      });
+    }
+  </script>
+
+</body>
+</html>

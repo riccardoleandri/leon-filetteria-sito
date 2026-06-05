@@ -1,0 +1,219 @@
+/* ============================================
+   LEON — Filetteria Bisteccheria
+   Global Styles: Reset, Variabili, Tipografia
+   ============================================ */
+
+/* --- Variabili CSS --- */
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-warm: #1a1508;
+  --text-primary: #f5f0e8;
+  --text-secondary: #9a8a72;
+  --fire-red: #8b1a1a;
+  --border-gold: rgba(201, 168, 76, 0.25);
+  --green-tri: #00A550;
+  --red-tri: #CE2B37;
+  --font-display: 'Playfair Display', serif;
+  --font-sub: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+  --nav-height: 80px;
+  --section-padding: clamp(60px, 10vw, 120px);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Scrollbar custom --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--bg-primary);
+}
+
+/* --- Selezione testo --- */
+::selection {
+  background: var(--gold);
+  color: var(--bg-primary);
+}
+::-moz-selection {
+  background: var(--gold);
+  color: var(--bg-primary);
+}
+
+/* --- Focus visibile accessibile --- */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+}
+
+/* --- Label maiuscoli --- */
+.label-upper {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* --- Sottotitoli eleganti --- */
+.subtitle-elegant {
+  font-family: var(--font-sub);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-secondary);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* --- Link base --- */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--gold-light);
+}
+
+/* --- Immagini responsive --- */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* --- Sezioni --- */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+/* --- Separatore gold --- */
+.separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto;
+}
+
+.separator-short {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+/* --- Titolo di sezione con decorazione --- */
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.section-header .label-upper {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-header h2 {
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Utilità --- */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.text-italic { font-style: italic; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* --- Responsive base --- */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+    --section-padding: clamp(40px, 8vw, 80px);
+  }
+}

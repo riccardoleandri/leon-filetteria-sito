@@ -1,0 +1,255 @@
+/* ============================================
+   LEON — Animazioni e Keyframes
+   ============================================ */
+
+/* --- Loader iniziale --- */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-logo {
+  width: 120px;
+  height: 120px;
+  animation: loaderPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* --- Bordo gold pulsante --- */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(201, 168, 76, 0.3),
+                0 0 15px rgba(201, 168, 76, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(201, 168, 76, 0.5),
+                0 0 30px rgba(201, 168, 76, 0.2);
+  }
+}
+
+.glow-gold {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* --- Scintille / braci --- */
+.embers-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ember {
+  position: absolute;
+  bottom: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e8731a;
+  animation: floatUp var(--duration, 6s) var(--delay, 0s) infinite linear;
+  opacity: 0;
+}
+
+.ember:nth-child(odd) {
+  background: #c9a84c;
+  width: 3px;
+  height: 3px;
+}
+
+.ember:nth-child(3n) {
+  background: #ff4500;
+  width: 2px;
+  height: 2px;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) translateX(var(--drift, 30px)) scale(0.3);
+  }
+}
+
+/* --- Scroll indicator pulsante --- */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 0.5; }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: scrollBounce 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.scroll-indicator svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--gold);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* --- Badge pulsante --- */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(201, 168, 76, 0); }
+}
+
+.badge-pulse {
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* --- Counter fade in --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* --- Hover fill button --- */
+.btn-fill-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-fill-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gold);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.btn-fill-hover:hover::after {
+  left: 0;
+}
+
+.btn-fill-hover:hover {
+  color: var(--bg-primary);
+}
+
+/* --- Underline animato --- */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* --- Card flip --- */
+.card-flip-container {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-flip-container.flipped .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+}
+
+/* --- AOS overrides per coerenza con palette --- */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* --- Tricolore decorativo --- */
+.tricolore-line {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 10%,
+    var(--green-tri) 25%,
+    var(--green-tri) 35%,
+    #fff 35%,
+    #fff 50%,
+    var(--red-tri) 50%,
+    var(--red-tri) 65%,
+    transparent 80%
+  );
+  opacity: 0.6;
+}
