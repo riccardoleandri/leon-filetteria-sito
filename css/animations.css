@@ -240,16 +240,16 @@
 
 /* --- Tricolore decorativo --- */
 .tricolore-line {
+  width: 120px;
   height: 2px;
   background: linear-gradient(90deg,
-    transparent 10%,
-    var(--green-tri) 25%,
-    var(--green-tri) 35%,
-    #fff 35%,
-    #fff 50%,
-    var(--red-tri) 50%,
-    var(--red-tri) 65%,
-    transparent 80%
+    var(--green-tri) 0%,
+    var(--green-tri) 33%,
+    #fff 33%,
+    #fff 66%,
+    var(--red-tri) 66%,
+    var(--red-tri) 100%
   );
   opacity: 0.6;
+  border-radius: 1px;
 }
