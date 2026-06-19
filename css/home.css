@@ -1166,6 +1166,110 @@
 }
 
 /* ============================================
+   SEZIONE — Il Locale (galleria fotografica)
+   Masonry grid con foto reali del ristorante
+   ============================================ */
+.locale-section {
+  background: var(--bg-secondary);
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.locale-header {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.locale-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.locale-header h2 strong {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.locale-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.locale-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.locale-item--wide {
+  grid-column: span 2;
+}
+
+.locale-item--tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.locale-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.locale-item:hover img {
+  transform: scale(1.05);
+}
+
+.locale-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.15);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.locale-item:hover::after {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .locale-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
+
+  .locale-item--tall {
+    grid-row: span 1;
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 480px) {
+  .locale-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .locale-item--wide {
+    grid-column: span 2;
+  }
+
+  .locale-item {
+    aspect-ratio: 3/2;
+  }
+}
+
+/* ============================================
    POPUP — All You Can Eat
    Appare all'ingresso, drammatico e convincente
    ============================================ */
@@ -1194,12 +1298,13 @@
   position: relative;
   width: 100%;
   max-width: 520px;
-  background: var(--bg-warm);
-  border: 1px solid var(--gold);
+  background: #111;
+  border: none;
+  border-radius: 4px;
   overflow: hidden;
   transform: scale(0.9) translateY(30px);
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 60px rgba(201, 168, 76, 0.15);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
 }
 
 .ayce-popup-overlay.active .ayce-popup {
@@ -1211,12 +1316,14 @@
   top: 12px;
   right: 12px;
   z-index: 3;
-  width: 36px;
-  height: 36px;
-  background: rgba(10, 10, 10, 0.7);
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  color: var(--text-primary);
-  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.3rem;
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -1226,8 +1333,7 @@
 }
 
 .ayce-popup-close:hover {
-  background: var(--gold);
-  color: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .ayce-popup-image {
@@ -1246,7 +1352,7 @@
 .ayce-popup-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--bg-warm) 0%, transparent 60%);
+  background: linear-gradient(to top, #111 0%, transparent 60%);
 }
 
 .ayce-popup-content {
@@ -1259,21 +1365,16 @@
 
 .ayce-popup-badge {
   display: inline-block;
-  background: var(--fire-red);
+  background: #c0392b;
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 5px 16px;
+  padding: 5px 14px;
+  border-radius: 2px;
   margin-bottom: 14px;
-  animation: badgePulse 2s ease-in-out infinite;
-}
-
-@keyframes badgePulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 26, 26, 0.5); }
-  50% { box-shadow: 0 0 0 8px rgba(139, 26, 26, 0); }
 }
 
 .ayce-popup-content h2 {
@@ -1282,6 +1383,7 @@
   font-weight: 400;
   font-style: italic;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 .ayce-popup-content h2 strong {
@@ -1292,9 +1394,9 @@
 .ayce-popup-tagline {
   font-family: var(--font-sub);
   font-style: italic;
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.5);
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .ayce-popup-prices {
@@ -1307,8 +1409,8 @@
 
 .ayce-popup-price {
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
 }
 
 .ayce-popup-price strong {
@@ -1316,14 +1418,14 @@
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--gold);
+  color: #fff;
   line-height: 1.2;
 }
 
 .ayce-popup-sep {
   width: 1px;
-  height: 30px;
-  background: var(--border-gold);
+  height: 24px;
+  background: rgba(255,255,255,0.12);
 }
 
 .ayce-popup-btn {
