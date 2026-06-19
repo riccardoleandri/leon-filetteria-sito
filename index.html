@@ -48,6 +48,30 @@
     <img class="loader-logo" src="assets/logo.png" alt="LEON" width="120" height="120">
   </div>
 
+  <!-- ========== POPUP ALL YOU CAN EAT ========== -->
+  <div class="ayce-popup-overlay" id="aycePopup">
+    <div class="ayce-popup">
+      <button class="ayce-popup-close" id="ayceClose" aria-label="Chiudi">&times;</button>
+      <div class="ayce-popup-image">
+        <img src="assets/ayce-tagliere.jpg" alt="All You Can Eat — Tagliere di carni alla brace">
+        <div class="ayce-popup-image-overlay"></div>
+      </div>
+      <div class="ayce-popup-content">
+        <span class="ayce-popup-badge">Novita</span>
+        <h2>All You Can Eat</h2>
+        <p class="ayce-popup-tagline">Carne illimitata. Tre formule. Un'esperienza unica.</p>
+        <div class="ayce-popup-prices">
+          <div class="ayce-popup-price">da <strong>&euro;22,90</strong></div>
+          <div class="ayce-popup-sep"></div>
+          <div class="ayce-popup-price">da <strong>&euro;26,90</strong></div>
+          <div class="ayce-popup-sep"></div>
+          <div class="ayce-popup-price">da <strong>&euro;29,00</strong></div>
+        </div>
+        <a href="#ayce" class="btn btn-gold ayce-popup-btn" id="ayceGoBtn">Scopri le Formule</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" role="navigation" aria-label="Navigazione principale">
     <div class="navbar-inner">
@@ -126,6 +150,89 @@
     <div class="scroll-cue" aria-hidden="true">
       <span class="scroll-cue-text">Scroll</span>
       <div class="scroll-cue-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ALL YOU CAN EAT — Sezione hero formule
+       ======================================== -->
+  <section id="ayce" class="ayce-section">
+    <div class="ayce-bg">
+      <img src="assets/ayce-tagliere.jpg" alt="All You Can Eat LEON" loading="lazy">
+      <div class="ayce-bg-overlay"></div>
+    </div>
+
+    <div class="ayce-inner">
+      <div class="ayce-header" data-aos="fade-up">
+        <span class="ayce-label">La formula che stavi aspettando</span>
+        <h2>All You Can <strong>Eat</strong></h2>
+        <p class="ayce-subtitle">Carne alla brace illimitata. Scegli la tua formula, siediti e lasciati servire.</p>
+      </div>
+
+      <div class="ayce-cards">
+        <!-- Formula 1 -->
+        <div class="ayce-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="ayce-card-image">
+            <img src="assets/ayce-tagliere.jpg" alt="Formula Vaki" loading="lazy">
+            <div class="ayce-card-image-overlay"></div>
+          </div>
+          <div class="ayce-card-body">
+            <span class="ayce-card-tag">Base</span>
+            <h3>Formula Vaki</h3>
+            <div class="ayce-card-price">&euro;22<span>,90</span></div>
+            <ul class="ayce-card-list">
+              <li>Bruschetta di benvenuto</li>
+              <li>Primo o secondo illimitato</li>
+              <li>Contorno a scelta</li>
+              <li>Bevanda inclusa</li>
+            </ul>
+            <a href="#prenota" class="btn btn-primary btn-fill-hover ayce-card-btn">Prenota Ora</a>
+          </div>
+        </div>
+
+        <!-- Formula 2 -->
+        <div class="ayce-card ayce-card--popular" data-aos="fade-up" data-aos-delay="100">
+          <div class="ayce-card-popular-badge">Piu scelta</div>
+          <div class="ayce-card-image">
+            <img src="assets/ayce-tagliere.jpg" alt="Formula Completa" loading="lazy">
+            <div class="ayce-card-image-overlay"></div>
+          </div>
+          <div class="ayce-card-body">
+            <span class="ayce-card-tag">Completa</span>
+            <h3>Formula Completa</h3>
+            <div class="ayce-card-price">&euro;26<span>,90</span></div>
+            <ul class="ayce-card-list">
+              <li>Antipasto misto della casa</li>
+              <li>Primo piatto a scelta</li>
+              <li>Secondo con contorno illimitato</li>
+              <li>Dolce o caffe</li>
+            </ul>
+            <a href="#prenota" class="btn btn-gold ayce-card-btn">Prenota Ora</a>
+          </div>
+        </div>
+
+        <!-- Formula 3 -->
+        <div class="ayce-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ayce-card-image">
+            <img src="assets/ayce-tagliere.jpg" alt="Formula Churrasco" loading="lazy">
+            <div class="ayce-card-image-overlay"></div>
+          </div>
+          <div class="ayce-card-body">
+            <span class="ayce-card-tag">Premium</span>
+            <h3>Formula Churrasco</h3>
+            <div class="ayce-card-price">&euro;29<span>,00</span></div>
+            <ul class="ayce-card-list">
+              <li>Antipasto misto premium</li>
+              <li>Selezione carni alla brace illimitata</li>
+              <li>Contorni a volonta</li>
+              <li>Dolce della casa</li>
+            </ul>
+            <a href="#prenota" class="btn btn-primary btn-fill-hover ayce-card-btn">Prenota Ora</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="ayce-disclaimer" data-aos="fade-up">Disponibile tutti i giorni a pranzo e cena &middot; Prenotazione consigliata &middot; Bevande escluse (tranne Formula Vaki)</p>
     </div>
   </section>
 
@@ -550,6 +657,34 @@
         track.scrollBy({ left: dir * 340, behavior: 'smooth' });
       });
     });
+
+    /* --- Popup All You Can Eat --- */
+    (function() {
+      const popup = document.getElementById('aycePopup');
+      const closeBtn = document.getElementById('ayceClose');
+      const goBtn = document.getElementById('ayceGoBtn');
+      if (!popup) return;
+
+      // Mostra popup dopo il loader (1.8s)
+      setTimeout(() => {
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }, 2000);
+
+      function closePopup() {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      closeBtn.addEventListener('click', closePopup);
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) closePopup();
+      });
+      goBtn.addEventListener('click', closePopup);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePopup();
+      });
+    })();
 
     /* Drag scroll sulla track */
     const track = document.querySelector('.tagli-track');
