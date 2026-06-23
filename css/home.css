@@ -1402,6 +1402,11 @@
   grid-column: span 2;
 }
 
+.locale-item--full {
+  grid-column: 1 / -1;
+  max-height: 340px;
+}
+
 .locale-item img {
   width: 100%;
   height: 100%;
