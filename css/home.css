@@ -80,9 +80,9 @@
 }
 
 .hero-brand img {
-  width: clamp(80px, 12vw, 130px);
+  width: clamp(100px, 14vw, 160px);
   height: auto;
-  filter: drop-shadow(0 4px 30px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 6px 30px rgba(0,0,0,0.7));
 }
 
 .hero-brand-text {
@@ -92,21 +92,22 @@
 
 .hero-brand-text .brand-name {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #fff;
   letter-spacing: 0.25em;
   line-height: 1;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  text-shadow: 0 3px 30px rgba(0,0,0,0.7);
 }
 
 .hero-brand-text .brand-sub {
   font-family: var(--font-body);
-  font-size: clamp(0.65rem, 1vw, 0.85rem);
+  font-size: clamp(0.7rem, 1.1vw, 0.95rem);
   letter-spacing: 0.35em;
-  color: var(--gold);
+  color: #fff;
   text-transform: uppercase;
-  margin-top: 6px;
+  margin-top: 8px;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.7);
 }
 
 /* Titolo hero: proporzionato, leggibile, cinematografico */
@@ -234,9 +235,31 @@
   .hero-brand {
     top: 80px;
     left: 20px;
+    gap: 14px;
+  }
+  .hero-brand img {
+    width: 70px;
+  }
+  .hero-brand-text .brand-name {
+    font-size: 1.8rem;
+  }
+  .hero-brand-text .brand-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
   }
   .hero-headline h1 {
     max-width: 100%;
+  }
+  .hero-headline h1 strong {
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(201, 168, 76, 0.4);
+  }
+  .hero-detail-text {
+    color: rgba(255,255,255,0.7);
+  }
+  .hero-detail-tag {
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
   }
   .scroll-cue {
     display: none;
@@ -874,8 +897,8 @@
 }
 
 .menu-brief-card--accent {
-  border-color: var(--leon-red);
-  background: rgba(178, 34, 52, 0.06);
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.04);
 }
 
 .menu-brief-card-price {
@@ -938,7 +961,6 @@
 .social-header h2 strong {
   font-weight: 700;
   font-style: italic;
-  color: var(--leon-red);
 }
 
 .social-reels {
@@ -1109,7 +1131,7 @@
 }
 
 .statement-quote em {
-  color: var(--leon-red);
+  color: var(--gold);
   font-style: italic;
 }
 
@@ -1359,9 +1381,9 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 20%, var(--leon-red) 50%, transparent 80%);
-  opacity: 0.5;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 25%, var(--leon-red-dark) 50%, transparent 75%);
+  opacity: 0.35;
 }
 
 .locale-header {
@@ -1380,7 +1402,7 @@
 .locale-header h2 strong {
   font-weight: 700;
   font-style: italic;
-  color: var(--leon-red);
+  color: var(--gold);
 }
 
 .locale-grid {
