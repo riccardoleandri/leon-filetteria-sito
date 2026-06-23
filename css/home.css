@@ -1026,40 +1026,24 @@
   margin-bottom: clamp(28px, 4vw, 44px);
 }
 
-.social-reel-placeholder {
+.social-reel {
   aspect-ratio: 9/16;
-  background: var(--bg-warm);
-  border: 1px dashed rgba(178, 34, 52, 0.3);
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: var(--text-secondary);
-  transition: border-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: var(--bg-warm);
 }
 
-.social-reel-placeholder:hover {
-  border-color: var(--leon-red);
+.social-reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.social-reel-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(178, 34, 52, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--leon-red);
-}
-
-.social-reel-placeholder span {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.social-reel:hover video {
+  filter: brightness(1.1);
 }
 
 .social-buttons {
