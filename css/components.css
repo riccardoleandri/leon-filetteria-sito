@@ -167,6 +167,10 @@
   margin-left: 8px;
 }
 
+.btn-prenota-nav:visited {
+  color: var(--bg-primary) !important;
+}
+
 .btn-prenota-nav:hover {
   background: var(--gold-light) !important;
   color: var(--bg-primary) !important;
@@ -213,11 +217,20 @@
     padding: 16px 24px !important;
     font-size: 0.9rem !important;
     letter-spacing: 0.15em;
+    color: var(--bg-primary) !important;
   }
 
-  /* Add bottom padding to footer so it's not hidden behind the bar */
+  .mobile-prenota-btn:visited {
+    color: var(--bg-primary) !important;
+  }
+
+  /* Add bottom padding so content isn't hidden behind the bar */
   .footer {
     padding-bottom: 90px;
+  }
+
+  .prenota-section {
+    padding-bottom: calc(var(--section-padding) + 70px);
   }
 }
 
@@ -267,8 +280,13 @@
   font-weight: 600;
 }
 
+.btn-gold:visited {
+  color: var(--bg-primary);
+}
+
 .btn-gold:hover {
   background: var(--gold-light);
+  color: var(--bg-primary);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
 }

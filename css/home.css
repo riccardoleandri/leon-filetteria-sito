@@ -1396,6 +1396,12 @@
   .prenota-form {
     padding: 20px 16px;
   }
+  .prenota-form .form-group {
+    margin-bottom: 16px;
+  }
+  .prenota-form .form-group label {
+    margin-bottom: 4px;
+  }
 }
 
 /* ============================================
