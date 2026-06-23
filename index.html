@@ -83,8 +83,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="carni.html">Le Carni</a></li>
-        <li><a href="#prenota">Prenota</a></li>
-        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#" class="btn btn-gold btn-prenota-nav" onclick="openDishBooking(); return false;">Prenota Ora</a></li>
       </ul>
 
       <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
@@ -99,8 +98,11 @@
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="carni.html">Le Carni</a>
-    <a href="#prenota">Prenota</a>
-    <a href="#contatti">Contatti</a>
+  </div>
+
+  <!-- Mobile sticky Prenota button -->
+  <div class="mobile-prenota-bar">
+    <a href="#" class="btn btn-gold mobile-prenota-btn" onclick="openDishBooking(); return false;">Prenota Ora</a>
   </div>
 
   <!-- ========================================
@@ -142,7 +144,7 @@
 
       <div class="hero-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
         <a href="menu.html" class="btn btn-primary btn-fill-hover">Scopri il Menu</a>
-        <a href="#prenota" class="btn btn-secondary link-underline">Prenota un Tavolo</a>
+        <a href="#" class="btn btn-secondary link-underline" onclick="openDishBooking(); return false;">Prenota un Tavolo</a>
       </div>
     </div>
 
@@ -516,7 +518,6 @@
        STATEMENT — Citazione + numeri
        ======================================== -->
   <section class="statement">
-    <div class="separator"></div>
     <div class="statement-inner">
       <div class="statement-quote" data-aos="fade-up" data-aos-duration="1200">
         Non serviamo semplicemente carne.<br>
@@ -543,7 +544,6 @@
         <a href="carni.html" class="btn btn-secondary link-underline">Scopri le Carni</a>
       </div>
     </div>
-    <div class="separator" style="margin-top: clamp(60px, 8vh, 100px);"></div>
   </section>
 
   <!-- ========================================
@@ -653,8 +653,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="carni.html">Le Carni</a></li>
-          <li><a href="#prenota">Prenota</a></li>
-          <li><a href="#contatti">Contatti</a></li>
         </ul>
 
         <div class="footer-social">
@@ -679,6 +677,13 @@
       offset: 60,
       easing: 'ease-out-cubic'
     });
+  </script>
+  <script>
+    // DISH Booking — placeholder, da integrare con widget DISH
+    function openDishBooking() {
+      // TODO: Sostituire con il widget DISH reale
+      window.open('https://www.dish.co/', '_blank');
+    }
   </script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>

@@ -33,8 +33,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html" class="active">Menu</a></li>
         <li><a href="carni.html">Le Carni</a></li>
-        <li><a href="index.html#prenota">Prenota</a></li>
-        <li><a href="index.html#contatti">Contatti</a></li>
+        <li><a href="#" class="btn btn-gold btn-prenota-nav" onclick="openDishBooking(); return false;">Prenota Ora</a></li>
       </ul>
       <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -46,8 +45,11 @@
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="carni.html">Le Carni</a>
-    <a href="index.html#prenota">Prenota</a>
-    <a href="index.html#contatti">Contatti</a>
+  </div>
+
+  <!-- Mobile sticky Prenota button -->
+  <div class="mobile-prenota-bar">
+    <a href="#" class="btn btn-gold mobile-prenota-btn" onclick="openDishBooking(); return false;">Prenota Ora</a>
   </div>
 
   <!-- ========== HERO MENU ========== -->
@@ -1013,8 +1015,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="carni.html">Le Carni</a></li>
-          <li><a href="index.html#prenota">Prenota</a></li>
-          <li><a href="index.html#contatti">Contatti</a></li>
         </ul>
         <div class="footer-social">
           <a href="#" aria-label="Instagram">
@@ -1029,6 +1029,11 @@
     </div>
   </footer>
 
+  <script>
+    function openDishBooking() {
+      window.open('https://www.dish.co/', '_blank');
+    }
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 600, once: true, offset: 60 });</script>
   <script src="js/main.js"></script>

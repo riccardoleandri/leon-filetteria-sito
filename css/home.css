@@ -128,11 +128,12 @@
 
 .hero-headline h1 strong {
   font-weight: 700;
-  color: var(--gold);
+  color: #fff;
   display: block;
   font-style: normal;
   padding-left: clamp(0px, 1.5vw, 24px);
   font-size: 1.05em;
+  text-shadow: 0 2px 40px rgba(201, 168, 76, 0.5), 0 0 80px rgba(201, 168, 76, 0.15);
 }
 
 /* Dettagli sotto il titolo: riga orizzontale con info */
@@ -230,36 +231,59 @@
 @media (max-width: 768px) {
   .hero {
     justify-content: flex-end;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
   }
   .hero-brand {
     top: 80px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     gap: 14px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .hero-brand img {
-    width: 70px;
+    width: 80px;
+  }
+  .hero-brand-text {
+    align-items: center;
   }
   .hero-brand-text .brand-name {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .hero-brand-text .brand-sub {
     font-size: 0.6rem;
     letter-spacing: 0.25em;
   }
+  .hero-content {
+    text-align: center;
+    padding: 0 20px;
+  }
   .hero-headline h1 {
     max-width: 100%;
+    font-size: clamp(2.6rem, 9vw, 3.8rem);
   }
   .hero-headline h1 strong {
-    color: #fff;
-    text-shadow: 0 2px 20px rgba(201, 168, 76, 0.4);
+    padding-left: 0;
+  }
+  .hero-details {
+    justify-content: center;
   }
   .hero-detail-text {
     color: rgba(255,255,255,0.7);
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
   }
   .hero-detail-tag {
     color: #fff;
     border-color: rgba(255,255,255,0.3);
+  }
+  .hero-cta {
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-cta .btn {
+    font-size: 0.9rem;
+    padding: 16px 28px;
   }
   .scroll-cue {
     display: none;
@@ -1076,32 +1100,11 @@
 .statement {
   position: relative;
   padding: clamp(80px, 12vh, 160px) 0;
-  background: var(--bg-primary);
-  overflow: hidden;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
 }
 
-/* Linee diagonali decorative */
-.statement::before,
-.statement::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 200px;
-  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-  opacity: 0.2;
-}
-
-.statement::before {
-  top: 0;
-  left: 20%;
-  transform: rotate(15deg);
-}
-
-.statement::after {
-  bottom: 0;
-  right: 25%;
-  transform: rotate(-10deg);
-}
 
 .statement-inner {
   max-width: 1000px;
