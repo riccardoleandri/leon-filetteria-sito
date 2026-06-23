@@ -227,63 +227,94 @@
 
 @media (max-width: 768px) {
   .hero {
-    justify-content: flex-end;
-    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
   }
+  /* Su mobile il brand è integrato nel flusso, non assoluto */
   .hero-brand {
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 14px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 24px;
   }
   .hero-brand img {
-    width: 100px;
+    width: 90px;
   }
   .hero-brand-text {
     align-items: center;
   }
   .hero-brand-text .brand-name {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+    padding-right: 0.3em;
   }
   .hero-brand-text .brand-sub {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.25em;
+    padding-right: 0.25em;
+    opacity: 0.85;
   }
   .hero-content {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-headline h1 {
     max-width: 100%;
-    font-size: clamp(2.6rem, 9vw, 3.8rem);
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    text-shadow: 0 3px 30px rgba(0,0,0,0.8);
   }
   .hero-headline h1 strong {
     padding-left: 0;
+    text-shadow: 0 3px 30px rgba(0,0,0,0.8), 0 0 60px rgba(201, 168, 76, 0.2);
   }
   .hero-details {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-detail-line {
+    display: none;
   }
   .hero-detail-text {
-    color: rgba(255,255,255,0.7);
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.7);
   }
   .hero-detail-tag {
     color: #fff;
     border-color: rgba(255,255,255,0.3);
+    font-size: 0.7rem;
   }
   .hero-cta {
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
   .hero-cta .btn {
-    font-size: 0.9rem;
-    padding: 16px 28px;
+    font-size: 0.85rem;
+    padding: 16px 36px;
+    width: 80%;
+    max-width: 300px;
   }
   .scroll-cue {
     display: none;
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(0deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.55) 40%, rgba(10,10,10,0.35) 60%, rgba(10,10,10,0.55) 100%);
   }
 }
 
