@@ -72,6 +72,18 @@
     </div>
   </div>
 
+  <!-- ========== POPUP PRENOTA (DISH) ========== -->
+  <div class="dish-popup-overlay" id="dishPopup">
+    <div class="dish-popup">
+      <button class="dish-popup-close" id="dishClose" aria-label="Chiudi">&times;</button>
+      <div class="dish-popup-header">
+        <h3>Prenota un Tavolo</h3>
+        <p>Seleziona data, ora e numero di ospiti</p>
+      </div>
+      <div class="dish-popup-widget" id="dishPopupWidget"></div>
+    </div>
+  </div>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" role="navigation" aria-label="Navigazione principale">
     <div class="navbar-inner">
@@ -659,8 +671,51 @@
   </script>
   <script>
     function openDishBooking() {
-      document.getElementById('prenota').scrollIntoView({ behavior: 'smooth' });
+      var popup = document.getElementById('dishPopup');
+      var widget = document.getElementById('dishPopupWidget');
+      // Carica widget solo la prima volta
+      if (!widget.hasChildNodes()) {
+        var div = document.createElement('div');
+        div.id = 'hors-hydra-popup';
+        widget.appendChild(div);
+        var _hors_popup=[
+          ['eid','hydra-93e84680-4a47-11ed-ac25-33ed41386d7a'],
+          ['tagid','hors-hydra-popup'],
+          ['width','100%'],
+          ['height',''],
+          ['foregroundColor','#f5f0e8'],
+          ['backgroundColor','#111111'],
+          ['linkColor','#c9a84c'],
+          ['errorColor','#e74c3c'],
+          ['primaryButtonForegroundColor','#0a0a0a'],
+          ['primaryButtonBackgroundColor','#c9a84c'],
+          ['secondaryButtonForegroundColor','#c9a84c'],
+          ['secondaryButtonBackgroundColor','transparent']
+        ];
+        window._hors = _hors_popup;
+        var e = document.createElement('script');
+        e.src = 'https://reservation.dish.co/widget.js';
+        document.body.appendChild(e);
+      }
+      popup.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
+
+    (function() {
+      var popup = document.getElementById('dishPopup');
+      var closeBtn = document.getElementById('dishClose');
+      function closeDishPopup() {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      closeBtn.addEventListener('click', closeDishPopup);
+      popup.addEventListener('click', function(e) {
+        if (e.target === popup) closeDishPopup();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup.classList.contains('active')) closeDishPopup();
+      });
+    })();
   </script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
