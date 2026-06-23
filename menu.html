@@ -66,6 +66,7 @@
   <!-- ========== FILTRO MOBILE ========== -->
   <div class="menu-filter-mobile">
     <button class="menu-filter-btn active" data-filter="all">Tutto</button>
+    <button class="menu-filter-btn" data-filter="ayce">All You Can Eat</button>
     <button class="menu-filter-btn" data-filter="antipasti">Antipasti</button>
     <button class="menu-filter-btn" data-filter="primi">Primi</button>
     <button class="menu-filter-btn" data-filter="secondi">Secondi</button>
@@ -84,6 +85,7 @@
     <!-- Sidebar desktop -->
     <aside class="menu-sidebar">
       <ul class="menu-sidebar-nav">
+        <li><a href="#ayce-menu">All You Can Eat</a></li>
         <li><a href="#antipasti">Antipasti</a></li>
         <li><a href="#bruschette">Bruschette</a></li>
         <li><a href="#primi">Primi Piatti</a></li>
@@ -103,6 +105,47 @@
 
     <!-- Contenuto menu -->
     <div class="menu-content">
+
+      <!-- ALL YOU CAN EAT -->
+      <section id="ayce-menu" class="menu-section menu-section-ayce" data-category="ayce">
+        <div class="menu-section-header">
+          <div class="menu-section-icon" style="background: rgba(178, 34, 52, 0.15);">
+            <svg viewBox="0 0 24 24" style="stroke: var(--leon-red);"><path d="M12 2C12 2 8 6 8 10c0 2.2 1.8 4 4 4s4-1.8 4-4c0-4-4-8-4-8zM12 14v8M8 18h8"/></svg>
+          </div>
+          <h2>All You Can Eat</h2>
+          <span class="menu-section-count" style="background: rgba(178, 34, 52, 0.15); color: var(--leon-red);">3 formule</span>
+        </div>
+
+        <div class="ayce-menu-intro">
+          <p>Carne alla brace illimitata, servita al tavolo. Scegli la tua formula e goditi l'esperienza LEON senza limiti.</p>
+        </div>
+
+        <div class="menu-item" style="background: rgba(178, 34, 52, 0.04); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.2); border-radius: 8px; margin-bottom: 12px;">
+          <div class="menu-item-info">
+            <div class="menu-item-name">Formula Vaki <span class="badge" style="background: rgba(178, 34, 52, 0.15); color: var(--leon-red); border: 1px solid rgba(178, 34, 52, 0.3);">Base</span></div>
+            <div class="menu-item-desc">Bruschetta di benvenuto, primo o secondo illimitato, contorno a scelta, bevanda inclusa</div>
+          </div>
+          <div class="menu-item-price">&euro;22,90</div>
+        </div>
+
+        <div class="menu-item" style="background: rgba(178, 34, 52, 0.08); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.35); border-radius: 8px; margin-bottom: 12px;">
+          <div class="menu-item-info">
+            <div class="menu-item-name">Formula Completa <span class="badge badge-raro" style="background: var(--leon-red);">Piu scelta</span></div>
+            <div class="menu-item-desc">Antipasto misto della casa, primo piatto a scelta, secondo con contorno illimitato, dolce o caffe</div>
+          </div>
+          <div class="menu-item-price">&euro;26,90</div>
+        </div>
+
+        <div class="menu-item" style="background: rgba(178, 34, 52, 0.04); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.2); border-radius: 8px; margin-bottom: 12px;">
+          <div class="menu-item-info">
+            <div class="menu-item-name">Formula Churrasco <span class="badge badge-premium">Premium</span></div>
+            <div class="menu-item-desc">Antipasto misto premium, selezione carni alla brace illimitata, contorni a volonta, dolce della casa</div>
+          </div>
+          <div class="menu-item-price">&euro;29,00</div>
+        </div>
+
+        <p style="font-size: 0.78rem; color: var(--text-secondary); opacity: 0.7; margin-top: 16px; font-style: italic;">Disponibile tutti i giorni a pranzo e cena. Bevande escluse (tranne Formula Vaki). Prenotazione consigliata.</p>
+      </section>
 
       <!-- ANTIPASTI -->
       <section id="antipasti" class="menu-section" data-category="antipasti">

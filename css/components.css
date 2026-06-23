@@ -23,6 +23,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-gold);
+  box-shadow: 0 1px 0 0 rgba(178, 34, 52, 0.2);
 }
 
 .navbar-inner {
@@ -373,6 +374,7 @@ textarea.form-control {
   background: var(--bg-secondary);
   padding: 60px 0 30px;
   position: relative;
+  border-top: 2px solid rgba(178, 34, 52, 0.3);
 }
 
 .footer-content {
