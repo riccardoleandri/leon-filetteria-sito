@@ -593,46 +593,28 @@
       </div>
 
       <div class="prenota-form" data-aos="fade-left">
-        <form novalidate>
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" class="form-control" placeholder="Il tuo nome" required>
-            <span class="form-error">Inserisci il tuo nome</span>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="telefono">Telefono</label>
-              <input type="tel" id="telefono" class="form-control" placeholder="+39 ..." required>
-              <span class="form-error">Inserisci un numero valido</span>
-            </div>
-            <div class="form-group">
-              <label for="ospiti">Ospiti</label>
-              <input type="number" id="ospiti" class="form-control" placeholder="2" min="1" max="30" required>
-              <span class="form-error">Numero ospiti richiesto</span>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="data">Data</label>
-              <input type="date" id="data" class="form-control" required>
-              <span class="form-error">Seleziona una data</span>
-            </div>
-            <div class="form-group">
-              <label for="ora">Ora</label>
-              <input type="time" id="ora" class="form-control" required>
-              <span class="form-error">Seleziona un orario</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="note">Note</label>
-            <textarea id="note" class="form-control" placeholder="Allergie, preferenze, occasioni speciali..." rows="3"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-gold" style="width: 100%;">Conferma Prenotazione</button>
-        </form>
+        <div id="hors-hydra-93e84680-4a47-11ed-ac25-33ed41386d7a"></div>
+        <script>
+          var _hors=[
+            ['eid','hydra-93e84680-4a47-11ed-ac25-33ed41386d7a'],
+            ['tagid','hors-hydra-93e84680-4a47-11ed-ac25-33ed41386d7a'],
+            ['width','100%'],
+            ['height',''],
+            ['foregroundColor','#f5f0e8'],
+            ['backgroundColor','#1a1508'],
+            ['linkColor','#c9a84c'],
+            ['errorColor','#e74c3c'],
+            ['primaryButtonForegroundColor','#0a0a0a'],
+            ['primaryButtonBackgroundColor','#c9a84c'],
+            ['secondaryButtonForegroundColor','#c9a84c'],
+            ['secondaryButtonBackgroundColor','transparent']
+          ];
+          (function(d, t) {
+            var e=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            e.src = "https://reservation.dish.co/widget.js";
+            s.parentNode.insertBefore(e,s);
+          }(document, 'script'));
+        </script>
       </div>
     </div>
   </section>
@@ -676,10 +658,8 @@
     });
   </script>
   <script>
-    // DISH Booking — placeholder, da integrare con widget DISH
     function openDishBooking() {
-      // TODO: Sostituire con il widget DISH reale
-      window.open('https://www.dish.co/', '_blank');
+      document.getElementById('prenota').scrollIntoView({ behavior: 'smooth' });
     }
   </script>
   <script src="js/main.js"></script>
