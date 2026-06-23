@@ -376,6 +376,7 @@
 
 .form-control {
   width: 100%;
+  min-width: 0;
   padding: 14px 18px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-gold);
@@ -385,6 +386,15 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 0;
   outline: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="date"].form-control,
+input[type="time"].form-control {
+  min-height: 50px;
 }
 
 .form-control::placeholder {
