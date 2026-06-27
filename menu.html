@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu — LEON Filetteria Bisteccheria | Roma</title>
-  <meta name="description" content="Il menu completo di LEON: antipasti, primi, secondi, filetti pregiati, carni esotiche, hamburger, dolci e una selezione di vini italiani.">
+  <meta name="description" content="Il menu completo di LEON: formule All You Can Eat, antipasti, primi, secondi, filetti pregiati, carni esotiche, dolci e vini.">
 
   <meta property="og:title" content="Menu — LEON Filetteria Bisteccheria">
-  <meta property="og:description" content="Scopri il nostro menu completo: antipasti, carni pregiate, filetti esotici e vini selezionati.">
+  <meta property="og:description" content="Scopri il nostro menu: formule All You Can Eat e menu completo sempre aggiornato.">
   <meta property="og:type" content="restaurant.menu">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
   <!-- ========== HERO MENU ========== -->
   <div class="menu-hero">
     <div class="menu-hero-bg">
-      <img src="assets/brace-pinze.jpg" alt="Carne alla brace" loading="eager">
+      <img src="assets/ayce-tagliere.jpg" alt="Carne alla brace" loading="eager">
     </div>
     <div class="menu-hero-overlay"></div>
     <div class="container menu-hero-content">
@@ -65,943 +65,105 @@
     </div>
   </div>
 
-  <!-- ========== FILTRO MOBILE ========== -->
-  <div class="menu-filter-mobile">
-    <button class="menu-filter-btn active" data-filter="all">Tutto</button>
-    <button class="menu-filter-btn" data-filter="ayce">All You Can Eat</button>
-    <button class="menu-filter-btn" data-filter="antipasti">Antipasti</button>
-    <button class="menu-filter-btn" data-filter="primi">Primi</button>
-    <button class="menu-filter-btn" data-filter="secondi">Secondi</button>
-    <button class="menu-filter-btn" data-filter="filetti">Filetti</button>
-    <button class="menu-filter-btn" data-filter="hamburger">Hamburger</button>
-    <button class="menu-filter-btn" data-filter="contorni">Contorni</button>
-    <button class="menu-filter-btn" data-filter="pizza">Pizza</button>
-    <button class="menu-filter-btn" data-filter="dolci">Dolci</button>
-    <button class="menu-filter-btn" data-filter="bevande">Bevande</button>
-    <button class="menu-filter-btn" data-filter="vini">Vini</button>
-  </div>
-
-  <!-- ========== LAYOUT MENU ========== -->
-  <div class="menu-layout">
-
-    <!-- Sidebar desktop -->
-    <aside class="menu-sidebar">
-      <ul class="menu-sidebar-nav">
-        <li><a href="#ayce-menu">All You Can Eat</a></li>
-        <li><a href="#antipasti">Antipasti</a></li>
-        <li><a href="#bruschette">Bruschette</a></li>
-        <li><a href="#primi">Primi Piatti</a></li>
-        <li><a href="#secondi">Secondi Piatti</a></li>
-        <li><a href="#filetti">Filetti</a></li>
-        <li><a href="#hamburger">Hamburger</a></li>
-        <li><a href="#contorni">Contorni</a></li>
-        <li><a href="#insalate">Insalate</a></li>
-        <li><a href="#pizza">Pizza / Focacce</a></li>
-        <li><a href="#dolci">Dolci</a></li>
-        <li><a href="#bibite">Bibite & Birre</a></li>
-        <li><a href="#vini-bianchi">Vini Bianchi</a></li>
-        <li><a href="#vini-rossi">Vini Rossi</a></li>
-        <li><a href="#vini-rosato">Vino Rosato</a></li>
-      </ul>
-    </aside>
-
-    <!-- Contenuto menu -->
-    <div class="menu-content">
-
-      <!-- ALL YOU CAN EAT -->
-      <section id="ayce-menu" class="menu-section menu-section-ayce" data-category="ayce">
-        <div class="menu-section-header">
-          <div class="menu-section-icon" style="background: rgba(178, 34, 52, 0.15);">
-            <svg viewBox="0 0 24 24" style="stroke: var(--leon-red);"><path d="M12 2C12 2 8 6 8 10c0 2.2 1.8 4 4 4s4-1.8 4-4c0-4-4-8-4-8zM12 14v8M8 18h8"/></svg>
-          </div>
-          <h2>All You Can Eat</h2>
-          <span class="menu-section-count" style="background: rgba(178, 34, 52, 0.15); color: var(--leon-red);">3 formule</span>
-        </div>
-
-        <div class="ayce-menu-intro">
-          <p>Carne alla brace illimitata, servita al tavolo. Scegli la tua formula e goditi l'esperienza LEON senza limiti.</p>
-        </div>
-
-        <div class="menu-item" style="background: rgba(178, 34, 52, 0.04); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.2); border-radius: 8px; margin-bottom: 12px;">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Formula Vaki <span class="badge" style="background: rgba(178, 34, 52, 0.15); color: var(--leon-red); border: 1px solid rgba(178, 34, 52, 0.3);">Base</span></div>
-            <div class="menu-item-desc">Bruschetta di benvenuto, primo o secondo illimitato, contorno a scelta, bevanda inclusa</div>
-          </div>
-          <div class="menu-item-price">&euro;22,90</div>
-        </div>
-
-        <div class="menu-item" style="background: rgba(178, 34, 52, 0.08); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.35); border-radius: 8px; margin-bottom: 12px;">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Formula Completa <span class="badge badge-raro" style="background: var(--leon-red);">Piu scelta</span></div>
-            <div class="menu-item-desc">Antipasto misto della casa, primo piatto a scelta, secondo con contorno illimitato, dolce o caffe</div>
-          </div>
-          <div class="menu-item-price">&euro;26,90</div>
-        </div>
-
-        <div class="menu-item" style="background: rgba(178, 34, 52, 0.04); padding: 18px 20px; border: 1px solid rgba(178, 34, 52, 0.2); border-radius: 8px; margin-bottom: 12px;">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Formula Churrasco <span class="badge badge-premium">Premium</span></div>
-            <div class="menu-item-desc">Antipasto misto premium, selezione carni alla brace illimitata, contorni a volonta, dolce della casa</div>
-          </div>
-          <div class="menu-item-price">&euro;29,00</div>
-        </div>
-
-        <p style="font-size: 0.78rem; color: var(--text-secondary); opacity: 0.7; margin-top: 16px; font-style: italic;">Disponibile tutti i giorni a pranzo e cena. Bevande escluse (tranne Formula Vaki). Prenotazione consigliata.</p>
-      </section>
-
-      <!-- ANTIPASTI -->
-      <section id="antipasti" class="menu-section" data-category="antipasti">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-          </div>
-          <h2>Antipasti</h2>
-          <span class="menu-section-count">9 piatti</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tagliere di Salumi della Casa</div>
-            <div class="menu-item-desc">Selezione di salumi artigianali con mostarde e miele</div>
-          </div>
-          <div class="menu-item-price">&euro;14,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Carpaccio di Manzo</div>
-            <div class="menu-item-desc">Rucola, scaglie di Parmigiano Reggiano DOP, olio EVO</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tartare di Fassona Piemontese</div>
-            <div class="menu-item-desc">Battuta al coltello, tuorlo d'uovo, capperi, senape</div>
-          </div>
-          <div class="menu-item-price">&euro;16,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Burrata Pugliese</div>
-            <div class="menu-item-desc">Con pomodorini Pachino e pesto di basilico fresco</div>
-          </div>
-          <div class="menu-item-price">&euro;13,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Polpo alla Griglia</div>
-            <div class="menu-item-desc">Su crema di patate, paprika affumicata</div>
-          </div>
-          <div class="menu-item-price">&euro;15,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Crocchette di Carne</div>
-            <div class="menu-item-desc">Panatura croccante, cuore filante, salsa BBQ</div>
-          </div>
-          <div class="menu-item-price">&euro;9,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Mozzarelline Fritte</div>
-            <div class="menu-item-desc">Impanate e dorate, servite con salsa marinara</div>
-          </div>
-          <div class="menu-item-price">&euro;8,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Involtini di Speck e Provola</div>
-            <div class="menu-item-desc">Gratinati al forno con miele di acacia</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Antipasto Leon</div>
-            <div class="menu-item-desc">Gran degustazione mista per 2 persone</div>
-          </div>
-          <div class="menu-item-price">&euro;24,00</div>
-        </div>
-      </section>
-
-      <!-- BRUSCHETTE -->
-      <section id="bruschette" class="menu-section" data-category="antipasti">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="2"/></svg>
-          </div>
-          <h2>Bruschette</h2>
-          <span class="menu-section-count">7 varianti</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Classica al Pomodoro</div>
-            <div class="menu-item-desc">Pomodoro fresco, basilico, aglio, olio EVO</div>
-          </div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Nduja e Stracciatella</div>
-            <div class="menu-item-desc">Nduja calabrese piccante con stracciatella di burrata</div>
-          </div>
-          <div class="menu-item-price">&euro;8,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Salmone e Avocado</div>
-            <div class="menu-item-desc">Salmone affumicato, crema di avocado, semi di sesamo</div>
-          </div>
-          <div class="menu-item-price">&euro;9,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Prosciutto e Fichi</div>
-            <div class="menu-item-desc">Crudo di Parma DOP, fichi freschi, riduzione di balsamico</div>
-          </div>
-          <div class="menu-item-price">&euro;8,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Funghi Porcini</div>
-            <div class="menu-item-desc">Trifolati con aglio e prezzemolo</div>
-          </div>
-          <div class="menu-item-price">&euro;9,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tartare su Crostino</div>
-            <div class="menu-item-desc">Mini tartare di manzo su crostino dorato</div>
-          </div>
-          <div class="menu-item-price">&euro;10,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Mix Bruschette (4 pezzi)</div>
-            <div class="menu-item-desc">Degustazione della nostra selezione</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-      </section>
-
-      <!-- PRIMI PIATTI -->
-      <section id="primi" class="menu-section" data-category="primi">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 17h18M5 12h14c1.1 0 2 .9 2 2H3c0-1.1.9-2 2-2zM5 12V8c0-3.31 2.69-6 6-6h2c3.31 0 6 2.69 6 6v4"/></svg>
-          </div>
-          <h2>Primi Piatti</h2>
-          <span class="menu-section-count">6 piatti</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Carbonara Tradizionale</div>
-            <div class="menu-item-desc">Guanciale croccante, pecorino Romano DOP, tuorlo d'uovo</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Amatriciana</div>
-            <div class="menu-item-desc">Guanciale, pomodoro San Marzano, pecorino Romano</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Cacio e Pepe</div>
-            <div class="menu-item-desc">Pecorino Romano, pepe nero macinato fresco</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Pappardelle al Ragu di Cinghiale</div>
-            <div class="menu-item-desc">Pasta fresca all'uovo, ragu di cinghiale cotto a lungo</div>
-          </div>
-          <div class="menu-item-price">&euro;14,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Risotto al Tartufo Nero</div>
-            <div class="menu-item-desc">Carnaroli mantecato, tartufo nero di Norcia, burro</div>
-          </div>
-          <div class="menu-item-price">&euro;16,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Gricia</div>
-            <div class="menu-item-desc">Guanciale, pecorino, pepe — la madre della carbonara</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-      </section>
-
-      <!-- SECONDI PIATTI -->
-      <section id="secondi" class="menu-section" data-category="secondi">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C12 2 8 6 8 10c0 2.2 1.8 4 4 4s4-1.8 4-4c0-4-4-8-4-8zM12 14v8M8 18h8"/></svg>
-          </div>
-          <h2>Secondi Piatti</h2>
-          <span class="menu-section-count">14 piatti</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tagliata di Manzo</div>
-            <div class="menu-item-desc">Con rucola e scaglie di Parmigiano</div>
-          </div>
-          <div class="menu-item-price">&euro;18,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Costata di Manzo</div>
-            <div class="menu-item-desc">Alla brace, con osso</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">al kg</span> &euro;45,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Bistecca Fiorentina</div>
-            <div class="menu-item-desc">Scottona toscana, minimo 800g</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">al kg</span> &euro;50,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tomahawk ~1kg</div>
-            <div class="menu-item-desc">La costata scenografica con osso lungo</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">all'etto</span> &euro;8,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Picanha di Manzo 300gr</div>
-            <div class="menu-item-desc">Taglio brasiliano alla brace</div>
-          </div>
-          <div class="menu-item-price">&euro;29,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Secreto Iberico 200gr</div>
-            <div class="menu-item-desc">Il segreto del maiale iberico, marezzatura perfetta</div>
-          </div>
-          <div class="menu-item-price">&euro;20,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Bavetta di Manzo 300gr</div>
-            <div class="menu-item-desc">Taglio saporito e succoso, grigliato a puntino</div>
-          </div>
-          <div class="menu-item-price">&euro;22,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">T-Bone Steak</div>
-            <div class="menu-item-desc">Filetto e controfiletto in un unico taglio</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">al kg</span> &euro;48,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Bistecca da Cube Roll Irlanda</div>
-            <div class="menu-item-desc">Cube roll irlandese grass-fed, sapore intenso</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">all'etto</span> &euro;7,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Pollo alla Brace</div>
-            <div class="menu-item-desc">Mezzo pollo marinato alle erbe, cotto lentamente</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Salsiccia alla Brace</div>
-            <div class="menu-item-desc">Artigianale, con finocchietto selvatico</div>
-          </div>
-          <div class="menu-item-price">&euro;10,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Costolette di Agnello</div>
-            <div class="menu-item-desc">Scottadito, marinate con rosmarino e aglio</div>
-          </div>
-          <div class="menu-item-price">&euro;18,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tagliere Leon</div>
-            <div class="menu-item-desc">Gran misto di carni alla brace per 2 persone</div>
-          </div>
-          <div class="menu-item-price">&euro;45,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Misto Salumi della Casa</div>
-            <div class="menu-item-desc">Selezione premium di salumi artigianali</div>
-          </div>
-          <div class="menu-item-price">&euro;16,00</div>
-        </div>
-      </section>
-
-      <!-- FILETTI (highlight) -->
-      <section id="filetti" class="menu-section highlight" data-category="filetti">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="none" stroke="currentColor"/></svg>
-          </div>
-          <h2>I Nostri Filetti</h2>
-          <span class="menu-section-count">7 tagli</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Wagyu Giappone (Kobe +10)
-              <span class="badge badge-raro">Raro</span>
-            </div>
-            <div class="menu-item-desc">Il marmo piu pregiato al mondo, un'esperienza che scioglie al palato</div>
-          </div>
-          <div class="menu-item-price"><span class="price-kg">all'etto</span> &euro;46,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Wagyu Italia 200gr
-              <span class="badge badge-premium">Premium</span>
-            </div>
-            <div class="menu-item-desc">Allevamento italiano, marezzatura eccellente</div>
-          </div>
-          <div class="menu-item-price">&euro;38,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Filetto di Zebra 200gr
-              <span class="menu-item-exotic" title="Carne Esotica — provenienza certificata">
-                <svg viewBox="0 0 12 12"><polygon points="6 1 7.5 4.5 11 5 8.5 7.5 9 11 6 9.5 3 11 3.5 7.5 1 5 4.5 4.5"/></svg>
-                Esotica
-              </span>
-            </div>
-            <div class="menu-item-desc">Carne magra e saporita con note selvatiche — Africa</div>
-          </div>
-          <div class="menu-item-price">&euro;39,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Filetto di Struzzo 200gr
-              <span class="menu-item-exotic" title="Carne Esotica — provenienza certificata">
-                <svg viewBox="0 0 12 12"><polygon points="6 1 7.5 4.5 11 5 8.5 7.5 9 11 6 9.5 3 11 3.5 7.5 1 5 4.5 4.5"/></svg>
-                Esotica
-              </span>
-            </div>
-            <div class="menu-item-desc">Tenero e delicato, praticamente privo di grassi — Africa</div>
-          </div>
-          <div class="menu-item-price">&euro;39,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Filetto di Canguro 200gr
-              <span class="menu-item-exotic" title="Carne Esotica — provenienza certificata">
-                <svg viewBox="0 0 12 12"><polygon points="6 1 7.5 4.5 11 5 8.5 7.5 9 11 6 9.5 3 11 3.5 7.5 1 5 4.5 4.5"/></svg>
-                Esotica
-              </span>
-            </div>
-            <div class="menu-item-desc">Sapore intenso e selvatico — Australia</div>
-          </div>
-          <div class="menu-item-price">&euro;35,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Filetto di Cervo 200gr
-              <span class="menu-item-exotic" title="Carne Esotica — provenienza certificata">
-                <svg viewBox="0 0 12 12"><polygon points="6 1 7.5 4.5 11 5 8.5 7.5 9 11 6 9.5 3 11 3.5 7.5 1 5 4.5 4.5"/></svg>
-                Esotica
-              </span>
-            </div>
-            <div class="menu-item-desc">Elegante e raffinato, con retrogusto boschivo — Europa</div>
-          </div>
-          <div class="menu-item-price">&euro;36,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">
-              Filetto di Scottona 200gr
-              <span class="badge badge-premium">Premium</span>
-            </div>
-            <div class="menu-item-desc">Tenero e succulento, allevamento selezionato</div>
-          </div>
-          <div class="menu-item-price">&euro;24,00</div>
-        </div>
-      </section>
-
-      <!-- HAMBURGER -->
-      <section id="hamburger" class="menu-section" data-category="hamburger">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 11h18M3 15h18M5 11V8a7 7 0 0114 0v3M5 15v1a2 2 0 002 2h10a2 2 0 002-2v-1"/></svg>
-          </div>
-          <h2>Hamburger</h2>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Leon Burger</div>
-            <div class="menu-item-desc">Patty 200gr, cheddar stagionato, bacon croccante, salsa Leon, brioche artigianale</div>
-          </div>
-          <div class="menu-item-price">&euro;14,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Smash Burger</div>
-            <div class="menu-item-desc">Doppio patty schiacciato, american cheese, cipolla caramellata, pickle</div>
-          </div>
-          <div class="menu-item-price">&euro;13,00</div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Cheeseburger Classico</div>
-            <div class="menu-item-desc">Patty, cheddar, lattuga, pomodoro, salsa speciale</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-      </section>
-
-      <!-- CONTORNI -->
-      <section id="contorni" class="menu-section" data-category="contorni">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/></svg>
-          </div>
-          <h2>Contorni</h2>
-          <span class="menu-section-count">8 scelte</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Patate al Forno</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Patatine Fritte</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Verdure Grigliate</div></div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Spinaci Saltati</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Cicoria Ripassata</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Insalata Mista</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Fagioli alla Texana</div></div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Pannocchia alla Brace</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-      </section>
-
-      <!-- INSALATE -->
-      <section id="insalate" class="menu-section" data-category="contorni">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M7 21H17M12 3v18M5 7c0-1.1.9-2 2-2h10a2 2 0 012 2c0 3.87-3.13 7-7 7s-7-3.13-7-7z"/></svg>
-          </div>
-          <h2>Insalate</h2>
-          <span class="menu-section-count">3 proposte</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Caesar Salad con Pollo</div>
-            <div class="menu-item-desc">Lattuga romana, pollo grigliato, crostini, salsa Caesar, Parmigiano</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Insalata Leon</div>
-            <div class="menu-item-desc">Rucola, noci, pere, gorgonzola, miele, aceto balsamico</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Insalata di Quinoa</div>
-            <div class="menu-item-desc">Quinoa, avocado, pomodorini, edamame, lime</div>
-          </div>
-          <div class="menu-item-price">&euro;10,00</div>
-        </div>
-      </section>
-
-      <!-- PIZZA / FOCACCE -->
-      <section id="pizza" class="menu-section" data-category="pizza">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 19h20L12 2z"/></svg>
-          </div>
-          <h2>Pizza / Focacce</h2>
-          <span class="menu-section-count">5 scelte</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Focaccia Classica</div>
-            <div class="menu-item-desc">Olio EVO, rosmarino, sale di Maldon</div>
-          </div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Focaccia Farcita Crudo e Stracciatella</div>
-            <div class="menu-item-desc">Crudo di Parma, stracciatella pugliese, rucola</div>
-          </div>
-          <div class="menu-item-price">&euro;11,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Pizza Margherita</div>
-            <div class="menu-item-desc">Pomodoro San Marzano, mozzarella fior di latte, basilico</div>
-          </div>
-          <div class="menu-item-price">&euro;8,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Pizza Leon</div>
-            <div class="menu-item-desc">Mozzarella, salsiccia, friarielli, provola affumicata</div>
-          </div>
-          <div class="menu-item-price">&euro;12,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Pinsa Romana</div>
-            <div class="menu-item-desc">Impasto leggero, croccante fuori e soffice dentro</div>
-          </div>
-          <div class="menu-item-price">&euro;10,00</div>
-        </div>
-      </section>
-
-      <!-- DOLCI -->
-      <section id="dolci" class="menu-section" data-category="dolci">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 014 4M8 12a4 4 0 014-4M2 20h20M4 20c0-4 3.58-8 8-8s8 4 8 8"/></svg>
-          </div>
-          <h2>Dolci</h2>
-          <span class="menu-section-count">9 tentazioni</span>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tiramisu della Casa</div>
-            <div class="menu-item-desc">Ricetta tradizionale con mascarpone e savoiardi</div>
-          </div>
-          <div class="menu-item-price">&euro;7,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Cheesecake ai Frutti di Bosco</div>
-            <div class="menu-item-desc">Base croccante, crema Philadelphia, coulis di frutti rossi</div>
-          </div>
-          <div class="menu-item-price">&euro;7,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Panna Cotta alla Vaniglia</div>
-            <div class="menu-item-desc">Con caramello salato</div>
-          </div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tortino al Cioccolato</div>
-            <div class="menu-item-desc">Cuore caldo fondente, servito con gelato alla vaniglia</div>
-          </div>
-          <div class="menu-item-price">&euro;8,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Cannolo Siciliano</div>
-            <div class="menu-item-desc">Crema di ricotta, gocce di cioccolato, granella di pistacchio</div>
-          </div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Crepe alla Nutella</div>
-            <div class="menu-item-desc">Con fragole fresche e zucchero a velo</div>
-          </div>
-          <div class="menu-item-price">&euro;7,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Semifreddo al Torroncino</div>
-            <div class="menu-item-desc">Croccante e cremoso, con cioccolato fondente</div>
-          </div>
-          <div class="menu-item-price">&euro;7,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Sorbetto al Limone</div>
-            <div class="menu-item-desc">Limoni di Sorrento, fresco e digestivo</div>
-          </div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info">
-            <div class="menu-item-name">Tagliere di Formaggi</div>
-            <div class="menu-item-desc">Selezione di formaggi italiani con miele e confetture</div>
-          </div>
-          <div class="menu-item-price">&euro;14,00</div>
-        </div>
-      </section>
-
-      <!-- BIBITE & BIRRE -->
-      <section id="bibite" class="menu-section" data-category="bevande">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 2h8l1 10H7L8 2zM7 12h10v2a6 6 0 01-6 6h-1a6 6 0 01-6-6v-2h3z"/></svg>
-          </div>
-          <h2>Bibite & Birre</h2>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Acqua Naturale / Frizzante 1L</div></div>
-          <div class="menu-item-price">&euro;2,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Coca-Cola / Fanta / Sprite</div></div>
-          <div class="menu-item-price">&euro;3,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Birra alla Spina 0.4L</div></div>
-          <div class="menu-item-price">&euro;5,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Birra Artigianale</div></div>
-          <div class="menu-item-price">&euro;6,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Caffe Espresso</div></div>
-          <div class="menu-item-price">&euro;1,50</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Amaro / Digestivo</div></div>
-          <div class="menu-item-price">&euro;4,00</div>
-        </div>
-      </section>
-
-      <!-- VINI BIANCHI -->
-      <section id="vini-bianchi" class="menu-section" data-category="vini">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 2h8l-1.5 7H9.5L8 2zM9.5 9h5c.83 0 1.5.67 1.5 1.5S15.33 12 14.5 12h-5c-.83 0-1.5-.67-1.5-1.5S8.67 9 9.5 9zM12 12v8M9 20h6"/></svg>
-          </div>
-          <h2>Vini Bianchi</h2>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Lazio</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Frascati Superiore DOC</div></div>
-            <div class="menu-item-price">&euro;16,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Est! Est!! Est!!! di Montefiascone</div></div>
-            <div class="menu-item-price">&euro;14,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Campania</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Falanghina del Sannio</div></div>
-            <div class="menu-item-price">&euro;18,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Fiano di Avellino DOCG</div></div>
-            <div class="menu-item-price">&euro;22,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Veneto</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Lugana DOC</div></div>
-            <div class="menu-item-price">&euro;20,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Alto Adige</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Gewurztraminer DOC</div></div>
-            <div class="menu-item-price">&euro;24,00</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- VINI ROSSI -->
-      <section id="vini-rossi" class="menu-section" data-category="vini">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 2h8l-1.5 7H9.5L8 2zM9.5 9h5c.83 0 1.5.67 1.5 1.5S15.33 12 14.5 12h-5c-.83 0-1.5-.67-1.5-1.5S8.67 9 9.5 9zM12 12v8M9 20h6"/></svg>
-          </div>
-          <h2>Vini Rossi</h2>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Toscana</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Chianti Classico DOCG</div></div>
-            <div class="menu-item-price">&euro;20,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Brunello di Montalcino DOCG</div></div>
-            <div class="menu-item-price">&euro;55,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Nobile di Montepulciano DOCG</div></div>
-            <div class="menu-item-price">&euro;28,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Piemonte</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Barolo DOCG</div></div>
-            <div class="menu-item-price">&euro;60,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Barbaresco DOCG</div></div>
-            <div class="menu-item-price">&euro;45,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Barbera d'Asti DOCG</div></div>
-            <div class="menu-item-price">&euro;18,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Puglia</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Primitivo di Manduria DOC</div></div>
-            <div class="menu-item-price">&euro;18,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Negroamaro Salento IGT</div></div>
-            <div class="menu-item-price">&euro;15,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Sicilia</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Nero d'Avola DOC</div></div>
-            <div class="menu-item-price">&euro;16,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Etna Rosso DOC</div></div>
-            <div class="menu-item-price">&euro;28,00</div>
-          </div>
-        </div>
-
-        <div class="wine-region">
-          <div class="wine-region-name">Veneto</div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Amarone della Valpolicella DOCG</div></div>
-            <div class="menu-item-price">&euro;65,00</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info"><div class="menu-item-name">Valpolicella Ripasso DOC</div></div>
-            <div class="menu-item-price">&euro;22,00</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- VINO ROSATO -->
-      <section id="vini-rosato" class="menu-section" data-category="vini">
-        <div class="menu-section-header">
-          <div class="menu-section-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 2h8l-1.5 7H9.5L8 2zM9.5 9h5c.83 0 1.5.67 1.5 1.5S15.33 12 14.5 12h-5c-.83 0-1.5-.67-1.5-1.5S8.67 9 9.5 9zM12 12v8M9 20h6"/></svg>
-          </div>
-          <h2>Vino Rosato</h2>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Cerasuolo d'Abruzzo DOC</div></div>
-          <div class="menu-item-price">&euro;16,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Chiaretto di Bardolino DOC</div></div>
-          <div class="menu-item-price">&euro;18,00</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-info"><div class="menu-item-name">Rosato Salento IGT</div></div>
-          <div class="menu-item-price">&euro;14,00</div>
-        </div>
-      </section>
-
-    </div><!-- /menu-content -->
-  </div><!-- /menu-layout -->
+  <!-- ========== ALL YOU CAN EAT ========== -->
+  <section class="section menu-ayce-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="label-upper">La formula che stavi aspettando</span>
+        <h2>Menu All You Can <strong>Eat</strong></h2>
+        <p>Carne alla brace illimitata, servita al tavolo. Scegli la tua formula e goditi l'esperienza LEON senza limiti.</p>
+      </div>
+
+      <div class="menu-ayce-cards" data-aos="fade-up">
+
+        <!-- Formula 22,90 -->
+        <div class="menu-ayce-card">
+          <div class="menu-ayce-card-header">
+            <span class="menu-ayce-card-tag">Base</span>
+            <div class="menu-ayce-card-price">&euro;22<span>,90</span></div>
+            <p class="menu-ayce-card-subtitle">a persona</p>
+          </div>
+          <div class="menu-ayce-card-body">
+            <h3>Menu di carne illimitata</h3>
+            <p class="menu-ayce-card-intro">Il menu comprende:</p>
+            <ul>
+              <li>Antipasto di prosciutto e mozzarella</li>
+              <li>Focaccia calda</li>
+              <li>Tagliata di manzo <strong>(illimitata)</strong></li>
+              <li>Contorno a scelta tra: patata fritta, patata al forno, insalata mista, cicoria ripassata</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Formula 26,90 -->
+        <div class="menu-ayce-card menu-ayce-card--popular">
+          <div class="menu-ayce-popular-badge">Piu scelta</div>
+          <div class="menu-ayce-card-header">
+            <span class="menu-ayce-card-tag">Completa</span>
+            <div class="menu-ayce-card-price">&euro;26<span>,90</span></div>
+            <p class="menu-ayce-card-subtitle">a persona</p>
+          </div>
+          <div class="menu-ayce-card-body">
+            <h3>Menu di carne illimitata</h3>
+            <p class="menu-ayce-card-intro">Il menu comprende:</p>
+            <ul>
+              <li>Antipasto di prosciutto e mozzarella</li>
+              <li>Focaccia calda</li>
+              <li>Tagliata di manzo e Picanha <strong>(illimitata)</strong></li>
+              <li>Contorno a scelta tra: patata fritta, patata al forno, insalata mista, cicoria ripassata</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Formula 29,00 -->
+        <div class="menu-ayce-card">
+          <div class="menu-ayce-card-header">
+            <span class="menu-ayce-card-tag">Premium</span>
+            <div class="menu-ayce-card-price">&euro;29<span>,00</span></div>
+            <p class="menu-ayce-card-subtitle">a persona</p>
+          </div>
+          <div class="menu-ayce-card-body">
+            <h3>Menu di carne illimitata</h3>
+            <p class="menu-ayce-card-intro">Il menu comprende:</p>
+            <ul>
+              <li>Antipasto a scelta tra: prosciutto e mozzarella / mozzarella con crema di tartufo</li>
+              <li>Focaccia calda</li>
+              <li>Tagliata di manzo, Picanha e selezione carni alla brace <strong>(illimitata)</strong></li>
+              <li>Contorno a scelta tra: patata fritta, patata al forno, insalata mista, cicoria ripassata</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regole -->
+      <div class="menu-ayce-rules" data-aos="fade-up">
+        <h4>Regole</h4>
+        <p>Per aderire alla promozione All You Can Eat tutto il tavolo deve partecipare e con lo stesso menu. I bambini al di sotto di 9 anni, se vogliono farlo, pagano la meta del prezzo, o possono prendere altre pietanze; da 10 anni in poi pagano il prezzo intero.</p>
+        <p>Se la carne viene ripetuta e non si finisce non puo essere portata via. E una promozione che facciamo ma siamo contro gli sprechi e solo cosi possiamo continuare a farlo. Convinti della vostra comprensione, ordina e fatti una bella mangiata di carne!</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="separator"></div>
+
+  <!-- ========== MENU COMPLETO ========== -->
+  <section class="section menu-completo-section">
+    <div class="container text-center" data-aos="fade-up">
+      <div class="section-header">
+        <span class="label-upper">Antipasti, primi, secondi, dolci e vini</span>
+        <h2>Il Menu <strong>Completo</strong></h2>
+        <p>Sfoglia il nostro menu completo sempre aggiornato: antipasti, primi piatti, secondi, filetti, hamburger, contorni, dolci e la nostra selezione di vini.</p>
+      </div>
+
+      <div class="menu-completo-cta">
+        <a href="https://go.nordqr.com/leon-filetteria/" target="_blank" rel="noopener" class="btn btn-gold menu-completo-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          Sfoglia il Menu Completo
+        </a>
+        <p class="menu-completo-note">Il menu si aggiorna in tempo reale con tutte le nostre proposte e i prezzi sempre aggiornati.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
@@ -1017,7 +179,7 @@
           <li><a href="carni.html">Le Carni</a></li>
         </ul>
         <div class="footer-social">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/leon_filetteria_bisteccheria/reels/" aria-label="Instagram" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
           </a>
           <a href="#" aria-label="Facebook">
@@ -1038,7 +200,6 @@
   <script>AOS.init({ duration: 600, once: true, offset: 60 });</script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
-  <script src="js/menu-filter.js"></script>
 
 </body>
 </html>
