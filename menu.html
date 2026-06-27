@@ -52,6 +52,18 @@
     <a href="#" class="btn btn-gold mobile-prenota-btn" onclick="openDishBooking(); return false;">Prenota Ora</a>
   </div>
 
+  <!-- ========== POPUP PRENOTA (DISH) ========== -->
+  <div class="dish-popup-overlay" id="dishPopup">
+    <div class="dish-popup">
+      <button class="dish-popup-close" id="dishClose" aria-label="Chiudi">&times;</button>
+      <div class="dish-popup-header">
+        <h3>Prenota un Tavolo</h3>
+        <p>Seleziona data, ora e numero di ospiti</p>
+      </div>
+      <div class="dish-popup-widget" id="dishPopupWidget"></div>
+    </div>
+  </div>
+
   <!-- ========== HERO MENU ========== -->
   <div class="menu-hero">
     <div class="menu-hero-bg">
@@ -193,8 +205,36 @@
 
   <script>
     function openDishBooking() {
-      window.open('https://reservation.dish.co/widget/hydra-93e84680-4a47-11ed-ac25-33ed41386d7a', '_blank');
+      var popup = document.getElementById('dishPopup');
+      var widget = document.getElementById('dishPopupWidget');
+      if (!widget.hasChildNodes()) {
+        var div = document.createElement('div');
+        div.id = 'hors-hydra-popup';
+        widget.appendChild(div);
+        window._hors = [
+          ['eid','hydra-93e84680-4a47-11ed-ac25-33ed41386d7a'],
+          ['tagid','hors-hydra-popup'],
+          ['width','100%'],['height',''],
+          ['foregroundColor','#f5f0e8'],['backgroundColor','#111111'],
+          ['linkColor','#c9a84c'],['errorColor','#e74c3c'],
+          ['primaryButtonForegroundColor','#0a0a0a'],['primaryButtonBackgroundColor','#c9a84c'],
+          ['secondaryButtonForegroundColor','#c9a84c'],['secondaryButtonBackgroundColor','transparent']
+        ];
+        var e = document.createElement('script');
+        e.src = 'https://reservation.dish.co/widget.js';
+        document.body.appendChild(e);
+      }
+      popup.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
+    (function() {
+      var popup = document.getElementById('dishPopup');
+      var closeBtn = document.getElementById('dishClose');
+      function close() { popup.classList.remove('active'); document.body.style.overflow = ''; }
+      closeBtn.addEventListener('click', close);
+      popup.addEventListener('click', function(e) { if (e.target === popup) close(); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popup.classList.contains('active')) close(); });
+    })();
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 600, once: true, offset: 60 });</script>

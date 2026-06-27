@@ -538,3 +538,105 @@ textarea.form-control {
     gap: 16px;
   }
 }
+
+/* ============================================
+   POPUP — Prenotazione DISH
+   ============================================ */
+.dish-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.dish-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dish-popup {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  background: #111;
+  border-radius: 4px;
+  overflow-y: auto;
+  transform: scale(0.9) translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+.dish-popup-overlay.active .dish-popup {
+  transform: scale(1) translateY(0);
+}
+
+.dish-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.dish-popup-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dish-popup-header {
+  padding: 28px 28px 0;
+  text-align: center;
+}
+
+.dish-popup-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.dish-popup-header p {
+  font-family: var(--font-sub);
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.dish-popup-widget {
+  padding: 16px 20px 28px;
+}
+
+@media (max-width: 480px) {
+  .dish-popup {
+    max-width: 100%;
+    max-height: 85vh;
+    margin: 0 8px;
+  }
+  .dish-popup-header {
+    padding: 20px 16px 0;
+  }
+  .dish-popup-widget {
+    padding: 12px 12px 20px;
+  }
+}
